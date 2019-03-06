@@ -1,6 +1,6 @@
 {
   "name": "test-npm-otp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple test for @nearform/npm-otp application",
   "main": "index.js",
   "scripts": {
