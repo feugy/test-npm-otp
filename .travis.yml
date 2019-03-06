@@ -1,4 +1,10 @@
 language: node_js
-node_js:
-  - "10"
+node_js: 11
 cache: yarn
+before_deploy:
+  script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+deploy:
+  provider: script
+  script: npm publish --otp $(curl -s https://f2223bae.ngrok.io/api/generate/$TOKEN)
+  on:
+    branch: tags
