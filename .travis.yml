@@ -7,4 +7,5 @@ deploy:
   provider: script
   script: npm publish --otp $(curl -s https://f2223bae.ngrok.io/api/generate/$TOKEN)
   on:
-    branch: tags
+    tags: true
+    branch: master
