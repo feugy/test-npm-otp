@@ -1,0 +1,1 @@
+module.exports = (name = 'who shall not be named') => `Hi ${name}!`
